@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var  sum = 0;
+var  jishu = 0;
+var  oushu = 0;
+
+//冒泡排序
+var array=[12,33,78,89,1,8];
+//循环控制比较躺数
+for(var i = 0;i<array.length-1;i++){
+	var isSort = true;//假设排序OK
+	//控制两两比较次数
+	for(var j=0;j<array.length-1 -i;j++){
+		if(array[j]>array[j+1]){
+			//从小到大
+			isSort = false;
+			var temp =array[j];
+			array[j] =array[j+1];
+		    array[j+1] = temp;
+		}
+		jishu++;
+		
+	}
+	oushu++;
+	if(isSort){
+		break;
+	}
+}
+document.write("内循环次数"+jishu+"<br/>");
+document.write("外循环次数"+oushu+"<br/>");
+document.write(array);
+console.log(array);
+
+</script>
+
+</body>
+</html>
